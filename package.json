@@ -1,0 +1,15 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume Site",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/main.scss _mobile.scss -o dist/css/ --recursive",
+    "serve": "live-server dist/"
+  },
+  "author": "Xavi",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
