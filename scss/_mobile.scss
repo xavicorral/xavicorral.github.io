@@ -40,6 +40,27 @@
       height: 150px;     
     }
   }
+
+  main {
+    &#about {
+      .about-info {
+        display: block;
+      }
+    }
+
+    .bio {
+      margin-bottom: 3rem;
+    }
+
+    .work {
+      margin-bottom: 2rem;
+    }
+
+    .work-company {
+      font-size: 20px;
+    }
+  }
+
 }
 
 @include mediaSm {
