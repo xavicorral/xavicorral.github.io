@@ -3,7 +3,8 @@ const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
-const navItems = document.querySelectorAll('.nav-item')
+const navItems = document.querySelectorAll('.nav-item');
+let upArrow = document.querySelector('div.up-arrow');
 
 let showMenu = false;
 
@@ -26,3 +27,19 @@ function toggleMenu() {
     showMenu = false;
   }
 };
+
+const myScrollFunc = () => {
+  var y = window.scrollY;
+  if (y >= 500) {
+    upArrow.classList.add("arrow-show");
+  } else {
+    upArrow.classList.remove("arrow-show");
+  }
+};
+
+const scrollUpSmoothly = () => {
+
+}
+
+window.addEventListener('scroll', myScrollFunc);
+upArrow.addEventListener('click', scrollUpSmoothly);

@@ -3,6 +3,7 @@
 
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -63,7 +64,7 @@ main {
     a {
       padding: 0.4rem;
       @include slowTransition();  
-      
+
       &:hover {
         color: $secondary-color;
       }
@@ -233,6 +234,25 @@ main {
         margin: 1.3rem;
       }
     }
+  }
+}
+
+div.up-arrow{
+  font-size: 2rem;
+  position: fixed;
+  right: -47px;
+  bottom: 61px;
+  background-color: lighten($primary-color, $amount: 10);
+  width: 45px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  @include slowTransition();
+  //display: none;
+
+  &.arrow-show {
+    //display: block;
+    transform: translateX(-55px);
   }
 }
 
