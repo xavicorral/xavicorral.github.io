@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/main.scss _mobile.scss -o dist/css/ --recursive",
-    "serve": "live-server dist/"
+    "serve": "live-server ."
   },
   "author": "Xavi",
   "license": "MIT",

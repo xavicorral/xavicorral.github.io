@@ -1,7 +1,7 @@
 $primary-color: #444444;
 $secondary-color: rgba(245, 201, 4, 0.918);
 $show-home-image: true;
-$home-image: url(/img/background.jpg);
+$home-image: url(/dist/img/background.jpg);
 $background-opacity: 0.9;
 
 @mixin overlay() {
