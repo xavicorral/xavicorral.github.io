@@ -62,9 +62,10 @@ main {
     
     a {
       padding: 0.4rem;
+      @include slowTransition();  
+      
       &:hover {
         color: $secondary-color;
-        @include slowTransition();  
       }
     }
   }
@@ -140,26 +141,30 @@ main {
     .my-projects {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem;
+      grid-gap: 1.5rem;
   
       img {
-        border: 3px solid white;
+        border: 0px solid white;
         width: 100%;
       }
   
       .project {
         margin-bottom: 20px;
-  
+
         a > img {
+          margin-bottom: 5px;
+          @include slowTransition();
           &:hover {
             opacity: 0.5;
-            border: 3px solid $secondary-color;
-            @include slowTransition();
+            border: 0px solid $secondary-color;
+            transform: scale(1.05);              
+            box-shadow: 5px 5px 3px 0px black;
           }
         }
+
         .project-link, .project-github {        
           padding: 0.5rem;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
           padding-left: 15px;
 
           &:hover {
@@ -191,6 +196,41 @@ main {
             color: black;
           }
         }
+      }
+    }
+  }
+
+  &#contact {
+    .contact-info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .contact-box {
+      font-size: 2rem;
+      padding: 0 1rem;
+      border: 3px solid white;
+      margin-top: 2rem;
+      @include slowTransition();
+
+      &:hover {
+        transform: scale(0.85, 0.85);
+        background-color: $secondary-color;
+        color: black;
+        
+
+        span {
+          color: black;
+        }
+      }
+
+      & > p > span {
+        margin-right: 10px;
+      }
+      p {
+        margin: 1.3rem;
       }
     }
   }
